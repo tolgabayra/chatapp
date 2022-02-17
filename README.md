@@ -8,7 +8,7 @@ cd /chatapp => npm run watch <br/>
 cd /chatapp => php artisan serve >>> running server ! <br/>
 
 
------------docker------------
+-----------docker------------ <br/>
 Docker; Bizim kendi bilgisayarımızda container teknolojisini kullarak sanallaştırma yapmaya yarayan bir araçtır.
 Biz dockerhub dan docker üzerinde çalıştırmak istediğimiz teknolojileri(iamges) 'docker pull postgres' komutu ile indirip kullanabiliyoruz.
 
