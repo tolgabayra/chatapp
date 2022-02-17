@@ -1,4 +1,4 @@
-# chatapp
+# Chatapp
 
 cd /socketserver => npm install <br/>
 cd /chatapp => npm install <br/>
@@ -10,7 +10,7 @@ cd /chatapp => php artisan serve >>> running server ! <br/>
 
 -----------docker------------ <br/>
 Docker; Bizim kendi bilgisayarımızda container teknolojisini kullarak sanallaştırma yapmaya yarayan bir araçtır.
-Biz dockerhub dan docker üzerinde çalıştırmak istediğimiz teknolojileri(iamges) 'docker pull postgres' komutu ile indirip kullanabiliyoruz.
+Biz dockerhub dan docker üzerinde çalıştırmak istediğimiz teknolojileri(redis,mongodb,rabbitmq) iamges olarak 'docker pull postgres' komutu ile indirip kullanabiliyoruz.
 
 Docker-compose.yml ile ayağa kaldırma ;
 Öncellikle bir yml dosyası oluşturmalıyız. Docker compose ile ayağa kaldıracağımız uygulamanın configürasyonlarını tanımlayabiliyoruz. Yml dosyası key- value çiftlerinden oluşur <br/>
