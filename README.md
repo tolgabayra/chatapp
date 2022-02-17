@@ -8,6 +8,11 @@ cd /chatapp => npm run watch <br/>
 cd /chatapp => php artisan serve >>> running server ! <br/>
 
 
+Web request -> Php , Laravel <br/>
+Socket Server -> Nodejs, Express, Postgressql <br/>
+Uı- Client -> ReactJS, Boostrap, Webpack <br/>
+
+
 -----------docker------------ <br/>
 Docker; Bizim kendi bilgisayarımızda container teknolojisini kullarak sanallaştırma yapmaya yarayan bir araçtır.
 Biz dockerhub dan docker üzerinde çalıştırmak istediğimiz teknolojileri(redis,mongodb,rabbitmq) images olarak 'docker pull postgres' komutu ile indirip kullanabiliyoruz.
