@@ -23,7 +23,6 @@ Sonra bu servisler için <i>image, ports, volumes, environment </i> parametreler
 Ve artık docker-compose dosyamızı ayağa kaldırmak için <i>docker-compose up </i> komutunu kullanıyoruz.Bu komut dosyayı çalıştırır ve servisleri ayağa kaldırır.<br/>
 
 docker-compose down ise containerı sonlandırır.
-----------------------------
 
 
 
