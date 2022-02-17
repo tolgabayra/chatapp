@@ -7,4 +7,12 @@ cd /socketserver => npm start <br/>
 cd /chatapp => npm run watch <br/>
 cd /chatapp => php artisan serve >>> running server ! <br/>
 
+----------------------------
+docker line
+
+
+
+
+----------------------------
+
 
