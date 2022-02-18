@@ -4,6 +4,7 @@ const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
 const Messages = require("./models/Messages")
+const User = require("./models/User")
 
 
 //database
@@ -49,35 +50,60 @@ const io = new Server(server, {
 });
 
 
+
+
 //socket üzerinden yayın !!!
 io.on("connection", (socket) => {
 
-  let users = []
- 
-  
   console.log(`User Connected: ${socket.id}`);
-  const datauser = users.filter(name=>name.includes(users))
-  if(users == datauser){
-    console.log("Username is already used !!");
-  }else{
-    socket.on("join_room", (data) => {
-    
-      socket.join(data);
-    console.log(`User with ID: ${socket.id} joined room: ${data}`);
-    
-    //users = data.author    
-    
-  });
-  }
- 
+  
+  //users.length = 0
+    // socket.on("auth_username",(data) => {
+    //   users.push(data)
+    //   console.log("MY USERS :", users);
+    //   console.log(users.includes(users));
+    // })
 
 
+       
+      //username-control ...
+      socket.on("join_room", (data) => { 
+
+        User.create({
+          Username: data.username
+        }).then((e) => {
+          console.log(e);
+        })
+        const dataUser = User.findOne({where:{Username: data.username}})
+        if(dataUser == null){
+          socket.join(data);
+          console.log(`User with ID: ${socket.id} joined room: ${data.room}`);
+        }else{
+          console.log("User is already used !!!!!");
+        }
+
+        // if(users.includes(data.username)==true){
+        //   console.log("Username is already used !!!");
+        //   socket._error()
+        // }else{
+        //   users.push(data.username)
+        //   socket.join(data);
+        //   console.log(`User with ID: ${socket.id} joined room: ${data.room}`);
+        // }
+        
+      
+      //users = data.author      
+    });
+    
+
+    
+    
   // Mesaj, veritabanı log !!!
   socket.on("send_message", (data) => {
     socket.to(data.room).emit("receive_message", data);
-          
+    console.log(users);    
         Messages.create({
-        messagebody: data.message
+        magebody: data.message
     }).then().catch(err=>console.log(err))
 
 
