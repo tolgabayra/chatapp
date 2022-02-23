@@ -75,12 +75,15 @@ io.on("connection", (socket) => {
           console.log(e);
         })
         const dataUser = User.findOne({where:{Username: data.username}})
-        if(dataUser == null){
-          socket.join(data);
+        .then((res)=>{
+          if(res.data > 0){
+            socket.join(data);
           console.log(`User with ID: ${socket.id} joined room: ${data.room}`);
-        }else{
-          console.log("User is already used !!!!!");
-        }
+          }
+          else{
+            console.log("User is already used !!!!!");
+          }
+        })
 
         // if(users.includes(data.username)==true){
         //   console.log("Username is already used !!!");
