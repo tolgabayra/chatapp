@@ -28,7 +28,14 @@ Sonra bu servisler için <i>image, ports, volumes, environment </i> parametreler
 Ve artık docker-compose dosyamızı ayağa kaldırmak için <i>docker-compose up </i> komutunu kullanıyoruz.Bu komut dosyayı çalıştırır ve servisleri ayağa kaldırır.<br/>
 docker ps komutu ile çalışan containerları görüntüleyebiliriz. <br/>
 
-docker-compose down ise containerı sonlandırır.
+docker-compose down ise containerı sonlandırır. <br/>
+
+---------------------------------------------------------- <br/>
+Öncelikle bilgisayarımızda docker olması gerekiyor. Resmi sitesinden docker ı indirip, docker -- version ile kontrol edebilirsiniz. <br/>
+- docker pull postgres => docker imageyi indiriyoruz.<br/>
+- ardından yml dosyasını yukarıda acıkladığım gibi oluşturuyoruz. <br/>
+- docker-compose up ile containerımızı ayağa kaldırıyoruz.
+
 
 ----Tolga Bayrak-----
 @
